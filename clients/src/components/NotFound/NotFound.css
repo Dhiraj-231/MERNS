@@ -1,0 +1,25 @@
+.notFound{
+    height: 100vh;
+    background-image: linear-gradient(to right,#fff5bc,#cec1ff);
+
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    padding: 2vmax;
+    box-sizing: border-box;
+}
+.notFoundContainer > svg {
+
+    font-size: 5vmax;
+}
+
+.notFoundContainer > a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:600px) {
+    .notFoundContainer{
+        width: 100%;
+    }
+}

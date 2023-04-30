@@ -177,7 +177,7 @@ const Post = ({
                 name={item.user.name}
                 avatar={item.user.avatar.url}
                 comment={item.comment}
-                commentId={item.commentId}
+                commentId={item._id}
                 postId={postId}
                 isAccount={isAccount}
               />

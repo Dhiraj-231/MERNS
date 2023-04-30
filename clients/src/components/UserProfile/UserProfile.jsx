@@ -72,7 +72,7 @@ function UserProfile() {
       });
       dispatch({ type: "clearMessasge" });
     }
-  }, [followError, message, dispatch, userError]);
+  }, [followError, message, dispatch, userError,error]);
   return loading === true || userLoading === true ? (
     <Loader />
   ) : (

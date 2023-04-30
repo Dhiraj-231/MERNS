@@ -330,7 +330,7 @@ export const getProfileDetail = async (req, res) => {
 
 export const getAllUser = async (req, res) => {
     try {
-        const user = await User.find({});
+        const user = await User.find({name:{ $regex: req.query.name, $options: "i" }});
 
         res.status(200).json({
             success: true,

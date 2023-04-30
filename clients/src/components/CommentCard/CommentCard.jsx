@@ -4,7 +4,7 @@ import { Button, Typography } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import "./CommentCard.css";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteComment } from "../../Actions/Post";
+import { deleteComment, getMyPosts } from "../../Actions/Post";
 import { getFollowingPost } from "../../Actions/User";
 const CommentCard = ({
   userId,
@@ -17,14 +17,14 @@ const CommentCard = ({
 }) => {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const deleteCommentHandler = async (e) => {
+  const deleteCommentHandler = (e) => {
     e.preventDefault();
-    await dispatch(deleteComment(postId, commentId));
+    dispatch(deleteComment(postId, commentId));
 
     if (isAccount) {
-      console.log("Bring my post");
+      dispatch(getMyPosts());
     } else {
-      await dispatch(getFollowingPost());
+      dispatch(getFollowingPost());
     }
   };
   return (

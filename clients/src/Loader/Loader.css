@@ -1,0 +1,20 @@
+.loadingPage{
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.loadingCricle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    border-top: 10px solid rgb(34, 34, 34);
+    border-bottom: 10px solid rgb(32, 23, 23);
+    animation: loading 1s  linear infinite;
+}
+
+@keyframes loading{
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}

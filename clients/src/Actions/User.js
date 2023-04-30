@@ -59,13 +59,13 @@ export const getFollowingPost = () => async (dispatch) => {
     }
 }
 
-export const getAllUSer = () => async (dispatch) => {
+export const getAllUSer = (name = "") => async (dispatch) => {
     try {
         dispatch({
             type: "allUserRequest"
         })
 
-        const { data } = await axios.get("/user/getAllDetail");
+        const { data } = await axios.get(`/user/getAllDetail?name=${name}`);
         dispatch({
             type: "allUserSuccess",
             payload: data.user

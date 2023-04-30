@@ -14,7 +14,6 @@ router.delete("/deleteProfile/me", isAuth, deleteProfile);
 router.get("/profileDetail/me", isAuth, myProfileDetail);
 router.get("/ProfileDetail/:id", isAuth, getProfileDetail);
 router.get("/getAllDetail", isAuth, getAllUser);
-router.get("/getAllDetail", isAuth, getAllUser);
 router.post("/forget/password", forgotPassword);
 router.put("/resetPassword/:token", resetPassword);
 router.get("/mypost", isAuth, getmyPost);
