@@ -20,7 +20,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser())
 app.use("/post", router);
-app.use("/user", router1)
+app.use("/user", router1);
 app.get("/", (req, res) => {
     res.send("Hii i am your server");
 });
